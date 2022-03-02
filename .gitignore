@@ -1,5 +1,4 @@
-Data/CSVs
-Data/processed
+ Data/processed
 saved_models/model.pth
 saved_models/base_model.pth
 Tests/
