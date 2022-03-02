@@ -1,0 +1,8 @@
+Data/CSVs
+Data/processed
+saved_models/model.pth
+saved_models/base_model.pth
+Tests/
+.vscode
+ImageData/asl_alphabet_test
+ImageData/asl_alphabet_train
