@@ -33,7 +33,7 @@ When **GNNs** 💜 **MediaPipe**. This is a starter project where I tried to imp
             |___ main.py # from data to train
             |___ run.py  # real time video visualization
 ```
-I used `PyTorch geometric` and `PyTorch` for the project. To run this project first clone this repo using this command:
+I used `PyTorch geometric` and `PyTorch` for the project. To view the results in details head over to the `IPYNB` folder and see the first IPYNB file. To run this project first clone this repo using this command:
 
 ```
 git clone https://github.com/Anindyadeep/SignLangGNN
