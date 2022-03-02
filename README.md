@@ -33,11 +33,31 @@ When **GNNs** 💜 **MediaPipe**. This is a starter project where I tried to imp
             |___ main.py # from data to train
             |___ run.py  # real time video visualization
 ```
-I used `PyTorch geometric` and `PyTorch` for the project. To run this project first download the dataset using this API
+I used `PyTorch geometric` and `PyTorch` for the project. To run this project first clone this repo using this command:
 
 ```
-kaggle datasets download -d grassknoted/asl-alphabet
+git clone https://github.com/Anindyadeep/SignLangGNN
 ```
 
-Unzip the downloaded zip files and put those on the `ImageData` folder. 
+After that run the `main.py` using this command. Other things will be managed automatically, provided al,l the essential libraries are installed.
 
+```
+python3 main.py
+```
+---
+
+## **Initial Results**
+
+The traning and validation process went smooth as with a very simple base model it gave an `train acc` of `0.85` and `validation acc` of `0.86`. It also provided an `test acc` of `0.84`. The model was run for 8 epochs. The model also gets confused with some sort of examples and we can say that it currently suffers from adverserial attacks.
+
+## **Improvements**
+
+These are the improvements we can do with this project:
+
+1. Improved GNN models. We can make more robust and complex models and improve the performance.
+
+2. Adding edge features. Some of the edge features like `distance between two nodes` and the `angle between two nodes` could produce some potential improvements to the performance of our model.
+
+
+## **Future Works**
+Using **Temporal Graph Neural Nets** could make more robust and accurate model for this kind of problem. But for that we need temporal data like videos instaed of images, so that we could generate `static temporal graphs` and compute on them as a dynamic graph sequence problem.
