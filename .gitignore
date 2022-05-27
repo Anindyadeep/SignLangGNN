@@ -5,3 +5,6 @@ Tests/
 .vscode
 ImageData/asl_alphabet_test
 ImageData/asl_alphabet_train
+
+Models/__pycache__
+src/__pycache__

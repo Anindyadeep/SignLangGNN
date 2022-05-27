@@ -26,13 +26,15 @@ from src.train import TrainModel
 from Models import base_gnn_model
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using device: {device}")
 
 hu = HandPosUtils()
 save_csv_folder_name = "Data/CSVs"
 
-hu.create_train_csv(save_csv_folder_name)
-hu.concat_all_csv_into_one(all_csv_path = "Data/CSVs",save_file_folder_name = "Data/raw", split=0.3)
-hu.create_test_csv("Data/raw")
+if not os.path.isdir(save_csv_folder_name):
+    hu.create_train_csv(save_csv_folder_name)
+    hu.concat_all_csv_into_one(all_csv_path = "Data/CSVs",save_file_folder_name = "Data/raw", split=0.3)
+    hu.create_test_csv("Data/raw")
 
 root_data_path = os.path.join(path, "Data/")
 
@@ -64,7 +66,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
 train_model = TrainModel(model)
 
-epochs = 8
+epochs = 3
 for epoch in tqdm(range(epochs)):
     current_train_loss, current_train_acc = train_model.train_model_perbatch(model, train_loader, criterion, optimizer)
     current_valid_loss, current_valid_acc = train_model.test_model_perbatch(model, valid_loader, criterion)

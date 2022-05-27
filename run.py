@@ -19,7 +19,7 @@ from src.utils import HandPosUtils
 from src.dataset import HandPosDataset
 from Models.base_gnn_model import Model 
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 model = Model(3, 64, 32, 29).to(device)
 
 model_path = os.path.join(path, "saved_models/base_model.pth")
@@ -27,6 +27,8 @@ model.load_state_dict(torch.load(model_path, map_location=torch.device(device)))
 
 handpos = HandPosUtils()
 label_dict = handpos.get_label_dict()
+print(label_dict)
+
 
 hand_conn = mp_hands.HAND_CONNECTIONS
 source_index = []
