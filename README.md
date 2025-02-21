@@ -59,5 +59,14 @@ These are the improvements we can do with this project:
 2. Adding edge features. Some of the edge features like `distance between two nodes` and the `angle between two nodes` could produce some potential improvements to the performance of our model.
 
 
-## **Future Works**
-Using **Temporal Graph Neural Nets** could make more robust and accurate model for this kind of problem. But for that we need temporal data like videos instaed of images, so that we could generate `static temporal graphs` and compute on them as a dynamic graph sequence problem.
+## **Future Works and Citation**
+Using **Temporal Graph Neural Nets** could make more robust and accurate model for this kind of problem. But for that we need temporal data like videos instaed of images, so that we could generate `static temporal graphs` and compute on them as a dynamic graph sequence problem. Feel free to cite my work, Thank you.
+
+```
+@misc{Sannigrahi2022SignLangGNN,
+  author = {Anindyadeep Sannigrahi},
+  title = {SignLangGNN: ASL Sign Language Classification using Graph Neural Networks and MediaPipe},
+  year = {2022},
+  url = {https://github.com/Anindyadeep/SignLangGNN}
+}
+```
